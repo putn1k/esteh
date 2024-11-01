@@ -1,0 +1,33 @@
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 48px 0;
+  color: var(--black-color);
+  background-color: var(--black-10-color);
+  background-image: url('../img/covers/hero-cover.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-image: fill 0 linear-gradient(to top, rgba(230, 230, 230, 0.8), #E6E6E6);
+  min-height: 375px;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__text {
+    @include crop-offset;
+
+    & p span {
+      color: var(--orange-color);
+    }
+  }
+
+  @include media-min ($md) {
+    min-height: 700px;
+  }
+
+  @include media-min ($xxl) {
+    min-height: 800px;
+  }
+}

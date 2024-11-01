@@ -1,0 +1,119 @@
+.site-footer {
+  padding: 48px 0;
+  color: var(--black-color);
+  background-color: var(--black-10-color);
+  border-top: 1px solid var(--black-50-color);
+
+  &__alt-text {
+    color: var(--black-50-color);
+  }
+
+  &__contacts {
+    display: grid;
+    row-gap: 24px;
+    border-bottom: 1px solid var(--black-50-color);
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+
+    & a {
+      color: inherit;
+
+      @include any-hover {
+        transition: color var(--duration-fast) ease-in-out;
+
+        &:hover {
+          color: var(--orange-color);
+        }
+      }
+    }
+  }
+
+  &__meta {
+    display: grid;
+    row-gap: 24px;
+    justify-items: start;
+
+    & a {
+      @include any-hover {
+        transition: color var(--duration-fast) ease-in-out;
+
+        &:hover {
+          color: var(--black-color);
+        }
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    &__contacts {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+    }
+
+    &__meta {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+
+      &>* {
+        &:nth-child(2n) {
+          justify-self: end;
+        }
+      }
+    }
+
+    &__contact-item {
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+
+      &:nth-child(3) {
+        order: 4;
+        text-align: right;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 64px 0;
+
+    &__contacts {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+    }
+
+    &__contact-item {
+      &:not(:first-child) {
+        justify-self: center;
+      }
+
+      &:nth-child(2) {
+        text-align: left;
+      }
+
+      &:nth-child(3) {
+        order: unset;
+        text-align: left;
+      }
+
+      &:last-child {
+        justify-self: end;
+      }
+    }
+
+    &__meta {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+
+      &>* {
+        &:not(:first-child) {
+          justify-self: center;
+        }
+
+        &:last-child {
+          justify-self: end;
+        }
+      }
+    }
+  }
+}

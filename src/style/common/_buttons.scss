@@ -1,0 +1,56 @@
+.btn {
+  @include btn-reset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+  padding: 8px 24px;
+  background-color: transparent;
+  border: 1px solid currentColor;
+
+  @include any-hover {
+    transition:
+      color var(--duration-fast) ease-in-out,
+      border-color var(--duration-fast) ease-in-out,
+      background-color var(--duration-fast) ease-in-out;
+  }
+}
+
+.btn-iconed {
+  padding: 8px;
+
+  & svg {
+    margin-right: 12px;
+  }
+
+  &--reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+.btn-primary {
+  color: var(--black-color);
+
+  &:hover {
+    color: var(--white-color);
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+  }
+}
+
+.btn-secondary {
+  color: var(--white-color);
+
+  &:hover {
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+  }
+}

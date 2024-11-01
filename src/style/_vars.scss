@@ -1,0 +1,29 @@
+:root {
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  --black-70-color: #4D4D4D;
+  --black-50-color: #808080;
+  --black-30-color: #B3B3B3;
+  --black-10-color: #E6E6E6;
+  --red-color: #BF0000;
+  --orange-color: #EB6227;
+  --error-color: var(--red-color);
+
+  // other vars
+  --min-site-width: 375px;
+  --max-site-width: 1920px;
+
+  // transitions
+  --duration-default: 0.3s;
+  --duration-fast: 0.15s;
+  --duration-slow: 0.4s;
+}
+
+$sm: 540px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$fhd: 1920px;
+$primary-font: "Montserrat";
+$secondary-font: "Bebas Neue Cyrillic";

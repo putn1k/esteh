@@ -1,0 +1,28 @@
+.hero-advantages {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    border-left: 1px solid var(--black-30-color);
+  }
+
+  &__value {
+    color: var(--orange-color);
+  }
+
+  &__label {
+    color: var(--black-70-color);
+  }
+
+  @include media-min ($xl) {
+    &__label {
+      padding-left: 24px;
+    }
+  }
+}

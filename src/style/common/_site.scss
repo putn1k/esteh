@@ -1,0 +1,26 @@
+.site {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-top: 67px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      padding-top: 69px;
+    }
+  }
+}

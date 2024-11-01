@@ -1,0 +1,32 @@
+.about-decor-block {
+  color: var(--white-color);
+  background-color: var(--black-color);
+
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__big-text {
+    font-size: 100px;
+  }
+
+  &__red {
+    color: #EB6227;
+  }
+
+  &__blue {
+    color: #1F70EB;
+  }
+
+  @include media-min ($xl) {
+    &__logo {
+      width: 160px;
+      height: 160px;
+    }
+
+    &__big-text {
+      font-size: 170px;
+    }
+  }
+}

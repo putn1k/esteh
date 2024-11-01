@@ -1,0 +1,64 @@
+body {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  font-family: $primary-font, Arial, Helvetica, sans-serif;
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+a {
+  color: var(--orange-color);
+  text-decoration-color: var(--link-line, transparent);
+}
+
+.is-sparced {
+  letter-spacing: 0.32em;
+}
+
+h1,
+.h1 {
+  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+h2,
+.h2 {
+  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+h3,
+.h3 {
+  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+.t-sm {
+  font-family: $primary-font, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+
+@include media-min ($xl) {
+  body {
+    font-size: 18px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 64px;
+  }
+
+  h2,
+  .h2 {
+    font-size: 48px;
+  }
+}

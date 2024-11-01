@@ -1,0 +1,25 @@
+<section class="item-card@if(context.class){ @class}">
+  <h3 class="h3 item-card__title">@title</h3>
+  <div class="item-card__img">
+    <img src="@if(context.img) {img/mock/@img.jpg}@if(!context.img) {img/mock/product-img.jpg}"
+         alt="">
+    <span class="item-card__img-bottom item-card__arrow"
+          aria-hidden="true">
+      <svg class="item-card__arrow-icon"
+           width="15"
+           height="15"
+           aria-hidden="true">
+        <use xlink:href="img/sprite.svg#arrow-top-right"></use>
+      </svg>
+    </span>
+  </div>
+  @if(context.text) {
+  <p class="t-sm item-card__text item-card__descr">@text</p>
+  }
+  @if(context.date) {
+  <time class="t-sm item-card__text item-card__datetime"
+        datetime="2023-07-06">06-07-2023</time>
+  }
+  <a class="item-card__link"
+     href="#"><span class="visually-hidden">Подробно</span></a>
+</section>

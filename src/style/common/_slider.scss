@@ -1,0 +1,86 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+
+  &:not(.swiper-initialized) {
+    opacity: 0;
+  }
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+
+  &__controls {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 12px;
+    width: 76px;
+    height: 30px;
+    border: 1px solid var(--black-50-color);
+    margin-left: auto;
+    margin-bottom: 16px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      right: 50%;
+      width: 1px;
+      background-color: var(--black-50-color);
+    }
+  }
+
+  @include media-min ($xl) {
+    &__controls {
+      width: 110px;
+      height: 40px;
+    }
+  }
+}
+
+.slider-control {
+  @include btn-reset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @include any-hover {
+    & svg {
+      transition: transform var(--duration-default) ease-in-out;
+    }
+
+
+    &[data-to-slide="prev"] {
+      & svg {
+        &:hover {
+          transform: translateX(-5px);
+        }
+      }
+    }
+
+    &[data-to-slide="next"] {
+      & svg {
+        &:hover {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    & svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
