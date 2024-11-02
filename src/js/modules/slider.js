@@ -10,6 +10,7 @@ const initSliders = () => {
   initSlider( '#catalog-slider', Object.assign( sliderConfig.mainSlider, sliderConfig.previewCatalog ) );
   initSlider( '#gallery-slider', Object.assign( sliderConfig.mainSlider, sliderConfig.previewGallery ) );
   initSlider( '#articles-slider', Object.assign( sliderConfig.mainSlider, sliderConfig.previewArticles ) );
+  initSlider( '#certificates-slider', Object.assign( sliderConfig.mainSlider, sliderConfig.certificates ) );
 };
 
 export {

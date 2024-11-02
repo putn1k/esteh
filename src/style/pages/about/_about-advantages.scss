@@ -1,0 +1,47 @@
+.about-advantages {
+  overflow: hidden;
+
+  &__list {
+    @include list-reset;
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
+    overflow-x: auto;
+  }
+
+  &__item {
+    display: list-item;
+    padding-left: 12px;
+    border-left: 1px solid var(--black-10-color);
+  }
+
+  &__icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin: 10px 0;
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--black-50-color);
+  }
+
+  @include media-min ($md) {
+    &__list {
+      overflow-x: visible;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

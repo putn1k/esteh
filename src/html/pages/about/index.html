@@ -1,0 +1,14 @@
+<section class="site__page-content">
+  <header class="site__page-meta site__page-meta--about">
+    <div class="container">
+      @include('../../common/breadcrumbs.html', {page: '@bcTitle', path: '@path'})
+      <h1 class="site__heading">@h1</h1>
+    </div>
+  </header>
+  @include('advantages.html')
+  @include('../main/about.html')
+  @include('mission.html')
+  @include('clients.html')
+  @include('certificates.html')
+  @include('delivery.html')
+</section>

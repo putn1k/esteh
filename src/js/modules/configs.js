@@ -33,6 +33,12 @@ const sliderConfig = {
       nextEl: '#articles-slider [data-to-slide="next"]',
     },
   },
+  certificates: {
+    navigation: {
+      prevEl: '#certificates-slider [data-to-slide="prev"]',
+      nextEl: '#certificates-slider [data-to-slide="next"]',
+    },
+  },
 };
 
 const smoothScrollConfig = {

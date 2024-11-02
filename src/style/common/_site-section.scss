@@ -26,6 +26,24 @@
     }
   }
 
+  &--mapped {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 48px;
+      background-image: url('../img/covers/delivery-map.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      pointer-events: none;
+    }
+  }
+
   &__slider {
     border-top: 1px solid var(--black-10-color);
     margin-top: 16px;
@@ -37,6 +55,42 @@
 
     display: grid;
     row-gap: 48px;
+  }
+
+  &__mission-list {
+    @include list-reset;
+
+    display: grid;
+    row-gap: 24px;
+
+    &>li {
+      position: relative;
+      padding-left: 40px;
+
+      &::before {
+        content: '\2022';
+        position: absolute;
+        left: 12px;
+        top: 0;
+      }
+    }
+  }
+
+  @include media-min ($md) {
+    &--mapped {
+      position: relative;
+
+      &::before {
+        left: 50%;
+        background-position: center left;
+      }
+    }
+
+    &__mission-list {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 48px;
+    }
   }
 
   @include media-min ($xl) {
@@ -59,6 +113,11 @@
       margin-bottom: -80px;
       padding-top: 0;
       transform: translateY(-80px);
+    }
+
+    &__mission-list {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 64px;
     }
   }
 }
