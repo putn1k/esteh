@@ -1,0 +1,60 @@
+.catalog-item {
+  overflow: hidden;
+
+  &__title {
+    margin: 0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--black-10-color);
+  }
+
+  &__descr {
+    @include crop-offset;
+
+    color: var(--black-50-color);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  &__list {
+    @include scrollbar($bar: var(--black-10-color), $thumb: var(--black-70-color), $radius: 0, $size: 8px, $m-size: thin);
+
+    display: flex;
+    overflow-x: auto;
+
+    &>* {
+      flex-basis: 255px;
+      flex-shrink: 0;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__descr {
+      margin-bottom: 32px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      overflow-x: visible;
+
+      &>* {
+        flex-basis: 255px;
+        flex-shrink: 0;
+
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

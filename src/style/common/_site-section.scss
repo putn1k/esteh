@@ -9,6 +9,7 @@
   &--dark {
     --card-color: var(--white-color);
     --card-bg: var(--black-color);
+    --bb-color: var(--black-70-color);
 
     color: var(--white-color);
     background-color: var(--black-color);
@@ -42,10 +43,10 @@
     padding: 96px 0;
 
     &__title {
-      border-bottom: 1px solid var(--black-10-color);
       padding-bottom: 16px;
       padding-right: 128px;
       margin-bottom: 32px;
+      border-bottom: 1px solid var(--bb-color, var(--black-10-color));
 
       &--no-border {
         border: none;

@@ -94,6 +94,16 @@ const sendData = ( evt, url, isOk, isError ) => {
     } );
 };
 
+const initObserver = ( targetNode, observeNode, isTrueFn, isFalseFn, config ) => {
+  if ( !targetNode || !observeNode ) return;
+  const callback = ( entries ) => {
+    entries.forEach( ( entry ) => {
+      ( !entry.isIntersecting ) ? isTrueFn( targetNode ): isFalseFn( targetNode );
+    } );
+  };
+  new IntersectionObserver( callback, config ).observe( observeNode );
+};
+
 export {
   iosVhFix,
   isEscKey,
@@ -101,5 +111,6 @@ export {
   unlockScroll,
   initSlider,
   initModal,
-  sendData
+  sendData,
+  initObserver
 };

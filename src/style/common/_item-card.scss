@@ -3,6 +3,7 @@
 
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &:focus-within {
     --card-color: var(--orange-color);
@@ -36,7 +37,7 @@
   &__title {
     margin: 0;
     margin-bottom: 8px;
-    color: var(--card-color);
+    color: var(--card-color, var(--black-color));
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -79,7 +80,7 @@
       right: 0;
       width: 35px;
       height: 35px;
-      border: 1px solid var(--card-color);
+      border: 1px solid var(--card-color, var(--black-color));
       transition: border-color var(--duration-fast) ease-in-out;
     }
   }
@@ -91,7 +92,7 @@
     width: 35px;
     height: 35px;
     padding: 10px;
-    color: var(--card-color);
+    color: var(--card-color, var(--black-color));
     transform: translate(var(--arrow-translate, 0));
     transition: color var(--duration-fast) ease-in-out, transform var(--duration-fast) ease-in-out;
   }

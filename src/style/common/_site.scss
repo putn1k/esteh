@@ -11,7 +11,34 @@
 
   &__content {
     flex-grow: 1;
-    padding-top: 67px;
+  }
+
+  &__page-meta {
+    margin-bottom: 32px;
+  }
+
+  &__heading {
+    margin: 0;
+    color: var(--black-30-color);
+  }
+
+  &__bc {
+    font-size: 16px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    color: var(--black-50-color);
+
+    & a {
+      color: inherit;
+
+      @include any-hover {
+        transition: color var(--duration-fast) ease-in-out;
+
+        &:hover {
+          color: var(--orange-color);
+        }
+      }
+    }
   }
 
   &__footer {
@@ -19,8 +46,13 @@
   }
 
   @include media-min ($xl) {
-    &__content {
-      padding-top: 69px;
+    &__page-meta {
+      margin-bottom: 48px;
+    }
+
+    &__bc {
+      padding-top: 32px;
+      padding-bottom: 48px;
     }
   }
 }

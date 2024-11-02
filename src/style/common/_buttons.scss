@@ -39,18 +39,22 @@
 .btn-primary {
   color: var(--black-color);
 
-  &:hover {
-    color: var(--white-color);
-    background-color: var(--orange-color);
-    border-color: var(--orange-color);
+  @include any-hover {
+    &:hover {
+      color: var(--white-color);
+      background-color: var(--orange-color);
+      border-color: var(--orange-color);
+    }
   }
 }
 
 .btn-secondary {
   color: var(--white-color);
 
-  &:hover {
-    background-color: var(--orange-color);
-    border-color: var(--orange-color);
+  @include any-hover {
+    &:hover {
+      background-color: var(--orange-color);
+      border-color: var(--orange-color);
+    }
   }
 }
