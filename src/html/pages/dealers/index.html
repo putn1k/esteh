@@ -1,0 +1,238 @@
+<section class="site__page-content">
+  <header class="site__page-meta">
+    <div class="container">
+      @include('../../common/breadcrumbs.html', {page: '@bcTitle', path: '@path'})
+      <h1 class="site__heading">@h1</h1>
+    </div>
+  </header>
+  <section class="dealers">
+    <div class="container">
+      <div class="dealers__map map-frame">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab3d023544af25c3f96ef3a0bfb87c259a65be501564bddf8d9a3d090e85071cd&amp;source=constructor"
+                width="1200"
+                height="500"></iframe>
+      </div>
+      <h2 class="visually-hidden">Список дилеров</h2>
+      <ul class="dealers__list row">
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/01.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ООО "Электронприбор"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">Московская область, г.Фрязино, ул. Барские Пруды, д.1А</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел./факс:</dt>
+                <dd class="h3">+7 (495) 677-91-11, доб. 103</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Коммерческий директор</dt>
+                <dd class="h3">Бляблин Алексей Александрович</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>E-mail:</dt>
+                <dd class="h3"><a href="mailto:baa@electronpribor.ru">baa@electronpribor.ru</a></dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.electronpribor.ru"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.electronpribor.ru</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/02.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ОСОО "АВТ"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">720044, Кыргызская Республика, г. Бишкек, пр. Мира, 38-3</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел:</dt>
+                <dd class="h3">+996312210500</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Факс:</dt>
+                <dd class="h3">+996312210102</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Коммерческий директор</dt>
+                <dd class="h3">Калашников Сергей Петрович</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.avt.kg/"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.avt.kg</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/03.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ТОО "Техносила-Казахстан"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <div class="dealer-item__props">
+                  <dt>Адрес</dt>
+                  <dd class="h3">Казахстан, 010000, Астана, ул. Бейбитшилик, 14, офис 402.</dd>
+                </div>
+                <div class="dealer-item__props">
+                  <dt>Тел./факс:</dt>
+                  <dd class="h3">(7172)32 35 94</dd>
+                </div>
+                <div class="dealer-item__props">
+                  <dt>Менеджер по продажам</dt>
+                  <dd class="h3">Чердынцев Артем</dd>
+                </div>
+                <div class="dealer-item__props">
+                  <dt>E-mail:</dt>
+                  <dd class="h3"><a href="mailto:manager@tekhnosila.kz">manager@tekhnosila.kz</a></dd>
+                </div>
+                <div class="dealer-item__props">
+                  <dt>Сайт:</dt>
+                  <dd class="h3"><a href="https://www.tekhnosila.kz/"
+                       target="_blank"
+                       rel="nofollow noreferer noopener">www.tekhnosila.kz</a></dd>
+                </div>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/04.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ТОО "Патент-Дубль"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">Казахстан, г. Петропавловск, ул. Горького, 172</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел./факс:</dt>
+                <dd class="h3">(7172)500-487, 500-488</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt></dt>
+                <dd class="h3"><a href="mailto:patend@mail.ru">patend@mail.ru</a></dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.patent-dubl.kz"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.patent-dubl.kz</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/05.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ООО "Терра Импэкс"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">630090, г. Новосибирск, ул. Инженерная, д.16</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел./факс:</dt>
+                <dd class="h3">(383) 3631850</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Контактное лицо</dt>
+                <dd class="h3">Рычкова Татьяна Евгеньевна</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.terra-kip.ru"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.terra-kip.ru</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/06.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ООО "ТехЭлектроМонтаж"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">Россия, г. Ангарск</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел./факс:</dt>
+                <dd class="h3">(3955) 559793, 657377</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Контактное лицо</dt>
+                <dd class="h3">Емельянова Оксана</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt></dt>
+                <dd class="h3"><a href="mailto:tem@irmail.ru">tem@irmail.ru</a></dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.temon.ru"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.temon.ru</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4 mb-5">
+          <section class="dealer-item">
+            <img class="dealer-item__logo"
+                 src="img/mock/dealers/07.png"
+                 alt="">
+            <h3 class="h3 dealer-item__title">ЗАО "Ангстрем-ИП"</h3>
+            <dl class="dealer-item__props-list">
+              <div class="dealer-item__props">
+                <dt>Адрес</dt>
+                <dd class="h3">150000, г. Ярославль а/я 917</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Тел./факс:</dt>
+                <dd class="h3">+7 (4852) 33 69 55</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt></dt>
+                <dd class="h3">Мокшеев Сергей</dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt></dt>
+                <dd class="h3"><a href="mailto:sales@angstremip.ru">sales@angstremip.ru</a></dd>
+              </div>
+              <div class="dealer-item__props">
+                <dt>Сайт:</dt>
+                <dd class="h3"><a href="https://www.angstremip.ru"
+                     target="_blank"
+                     rel="nofollow noreferer noopener">www.angstremip.ru</a></dd>
+              </div>
+            </dl>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,11 @@
+.map-frame {
+  position: relative;
+
+  & iframe {
+    @include full-size;
+
+    border: 0;
+  }
+
+
+}

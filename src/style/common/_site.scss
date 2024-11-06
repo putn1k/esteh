@@ -29,6 +29,11 @@
       margin-bottom: 0;
       min-height: 432px;
     }
+
+    &--product {
+      color: var(--black-color);
+      background-color: var(--white-color);
+    }
   }
 
   &__heading {

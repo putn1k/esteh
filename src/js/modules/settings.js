@@ -7,6 +7,11 @@ import {
 } from './utils.js';
 
 import {
+  initAllTabs
+} from './tabs.js';
+
+
+import {
   initScrollObserver,
 } from './scroll-observer.js';
 
@@ -19,6 +24,7 @@ const initSiteSettings = () => {
   initMobileMenu();
   initScrollObserver();
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
+  initAllTabs();
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
 };
 

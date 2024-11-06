@@ -1,0 +1,25 @@
+.dealers {
+  &__map {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 48px;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    &>li {
+      display: list-item;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__map {
+      height: 500px;
+      margin-bottom: 64px;
+    }
+  }
+}

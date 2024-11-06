@@ -1,0 +1,55 @@
+.dealer-item {
+  display: grid;
+  justify-items: start;
+  row-gap: 12px;
+  padding-left: 12px;
+  border-left: 1px solid var(--black-10-color);
+
+  &__logo {
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__props-list {
+    display: grid;
+    justify-items: start;
+    row-gap: 12px;
+    margin: 0;
+
+    & dt {
+      margin: 0;
+      margin-bottom: 4px;
+      color: var(--black-50-color);
+    }
+
+    & dd {
+      margin: 0;
+      line-height: 1.1;
+
+      & a {
+        --link-line: currentColor;
+
+        color: inherit;
+
+        @include any-hover {
+          transition: color var(--duration-fast) ease-in-out;
+
+          &:hover {
+            color: var(--orange-color);
+          }
+        }
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__logo {
+      height: 100px;
+    }
+  }
+}
