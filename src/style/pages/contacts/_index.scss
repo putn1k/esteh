@@ -1,0 +1,62 @@
+.contact-list {
+  color: var(--black-color);
+  background-color: var(--white-color);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 16px;
+    color: var(--black-30-color);
+  }
+
+  &__post {
+    margin: 0;
+    margin-bottom: 4px;
+    color: var(--black-30-color);
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  &__items {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__label {
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 4px;
+    color: var(--black-30-color);
+  }
+
+  &__list {
+    @include list-reset;
+
+    & a {
+      --link-line: currentColor;
+
+      color: inherit;
+
+      @include any-hover {
+        transition: color var(--duration-fast) ease-in-out;
+
+        &:hover {
+          color: var(--orange-color);
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 345px;
+  }
+
+  @include media-min ($xl) {
+    &__map {
+      height: 460px;
+    }
+  }
+}

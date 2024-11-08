@@ -13,9 +13,17 @@
     flex-grow: 1;
   }
 
-  &__page-meta {
-    margin-bottom: 32px;
+  &__page-content {
     color: var(--black-30-color);
+    background-color: var(--white-color);
+
+    &--dark {
+      background-color: var(--black-color);
+    }
+  }
+
+  &__page-meta {
+    padding-bottom: 32px;
 
     &--about {
       color: var(--black-color);
@@ -25,8 +33,6 @@
       background-position: center;
       background-size: cover;
       border-image: fill 0 linear-gradient(to top, rgba(230, 230, 230, 0.8), #E6E6E6);
-      padding-bottom: 64px;
-      margin-bottom: 0;
       min-height: 432px;
     }
 
@@ -65,11 +71,10 @@
 
   @include media-min ($xl) {
     &__page-meta {
-      margin-bottom: 48px;
+      padding-bottom: 48px;
 
       &--about {
         min-height: 564px;
-        margin-bottom: 0;
       }
     }
 

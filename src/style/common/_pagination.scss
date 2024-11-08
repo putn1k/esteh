@@ -1,0 +1,59 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 32px 0;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 8px;
+
+    @include any-hover {
+      transition:
+        color var(--duration-fast) ease-in-out,
+        border-color var(--duration-fast) ease-in-out;
+
+      &:hover {
+        color: var(--orange-color);
+      }
+    }
+  }
+
+  &__numbers-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__page-numbers {
+    font-family: $secondary-font, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 400;
+    margin: 0 8px;
+    padding: 0 8px;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+
+    &--current {
+      color: var(--orange-color);
+      border-color: currentColor;
+    }
+  }
+
+  @include media-min ($md) {
+
+    &__page-numbers {
+      margin: 0 12px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 48px 0;
+  }
+}
