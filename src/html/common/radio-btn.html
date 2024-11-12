@@ -1,0 +1,8 @@
+<label class="form-change form-change--radio">
+  <input class="form-change__field"
+         type="radio"
+         name="@type"
+         value="@value"
+         @if(context.checked){checked}>
+  <span class="form-change__label">@if(context.label){@label}@if(!context.label){@value}</span>
+</label>

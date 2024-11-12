@@ -4,6 +4,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
+  "parser": "@babel/eslint-parser",
   "env": {
     "es2020": true,
     "browser": true
@@ -16,6 +17,7 @@
     "JustTabs": "readonly",
     "JustValidate": "readonly",
     "noUiSlider": "readonly",
+    "QuizApp": "readonly",
     "SmoothScroll": "readonly",
     "Swiper": "readonly",
     "ymaps": "readonly"

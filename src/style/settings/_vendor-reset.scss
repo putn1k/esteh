@@ -1,3 +1,15 @@
 .swiper-slide {
   height: var(--swiper-height, 100%);
 }
+
+.hystmodal {
+  &--fs {
+    .hystmodal__wrap {
+      align-items: normal;
+    }
+
+    .hystmodal__window {
+      margin: 0;
+    }
+  }
+}

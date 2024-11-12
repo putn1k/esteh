@@ -1,0 +1,99 @@
+<form class="cb-quiz container"
+      id="quiz-modal-form">
+  <h2 class="h2 cb-quiz__title">Онлайн-заказ лаборатории</h2>
+  <div class="cb-quiz__slider slider"
+       id="quiz-slider">
+    <div class="h3 cb-quiz__pagination"
+         data-slider-pagination></div>
+    <div class="swiper-wrapper slider__wrapper">
+      <div class="swiper-slide cb-quiz__slide">
+        <div class="cb-quiz__slide-content">
+          <div class="cb-quiz__field">
+            @include('../common/radio-btn.html', { value: 'Красный', type: 'color', checked: true })
+          </div>
+          <div class="cb-quiz__field">
+            @include('../common/radio-btn.html', { value: 'Черный', type: 'color' })
+          </div>
+          <div class="cb-quiz__field">
+          </div>
+          <div class="cb-quiz__field">
+            @include('../common/checkbox-btn.html', {label: 'Чек', value: 'Черный', type: 'check' })
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <div class="cb-quiz__slide-content">
+          <div class="cb-quiz__field">
+            <label class="form-input">
+              <input class="form-input__field"
+                     type="text"
+                     name="ФИО"
+                     data-validate="name"
+                     placeholder="Ввидите ФИО"
+                     required>
+              <span class="t-sm is-gray-color form-input__label">Ваши Фамилия, Имя, Отчество:</span>
+            </label>
+          </div>
+          <div class="cb-quiz__field">
+            <label class="form-input">
+              <input class="form-input__field"
+                     type="text"
+                     name="Организация"
+                     data-validate="org"
+                     placeholder="Ввидите наименование организации"
+                     required>
+              <span class="t-sm is-gray-color form-input__label">Наименование Вашей организации:</span>
+            </label>
+          </div>
+          <div class="cb-quiz__field">
+            <label class="form-input">
+              <input class="form-input__field"
+                     type="text"
+                     name="Город"
+                     data-validate="city"
+                     placeholder="Ввидите город"
+                     required>
+              <span class="t-sm is-gray-color form-input__label">Город, в котором находится Ваша организация:</span>
+            </label>
+          </div>
+          <div class="cb-quiz__field">
+            <label class="form-input">
+              <input class="form-input__field"
+                     type="tel"
+                     name="Телефон"
+                     data-validate="phone"
+                     placeholder="Ввидите телефон"
+                     required>
+              <span class="t-sm is-gray-color form-input__label">Ваш контактный телефон/факс:</span>
+            </label>
+          </div>
+          <div class="cb-quiz__field">
+            <label class="form-input">
+              <input class="form-input__field"
+                     type="email"
+                     name="Эл.почта"
+                     data-validate="email"
+                     placeholder="Ввидите адрем почты"
+                     required>
+              <span class="t-sm is-gray-color form-input__label">Адрес Вашей электронной почты:</span>
+            </label>
+          </div>
+          <div class="cb-quiz__field cb-quiz__field--submit">
+            <button class="btn btn-primary"
+                    type="submit">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cb-quiz__controls">
+      <button class="btn btn-primary cb-quiz__control"
+              type="button"
+              data-to-slide="prev">Назад
+      </button>
+      <button class="btn btn-primary cb-quiz__control"
+              type="button"
+              data-to-slide="next">Далее
+      </button>
+    </div>
+  </div>
+</form>

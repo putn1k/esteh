@@ -39,6 +39,21 @@ const sliderConfig = {
       nextEl: '#certificates-slider [data-to-slide="next"]',
     },
   },
+  quiz: {
+    allowTouchMove: false,
+    init: false,
+    navigation: {
+      prevEl: '#quiz-slider [data-to-slide="prev"]',
+      nextEl: '#quiz-slider [data-to-slide="next"]',
+    },
+    pagination: {
+      el: '[data-slider-pagination]',
+      type: 'custom',
+      renderCustom: ( swiper, current, total ) => {
+        return current + ' из ' + total;
+      },
+    },
+  },
 };
 
 const smoothScrollConfig = {
@@ -54,12 +69,31 @@ const modalConfig = {
   backscroll: true,
 };
 
+const quizConfig = {
+  modalSelector: '#quiz-modal',
+  sliderSelector: '#quiz-slider',
+  formID: 'quiz-modal-form',
+  modalConfig: {
+    linkAttributeName: 'data-quizmodal',
+    catchFocus: true,
+    closeOnEsc: true,
+    backscroll: true,
+  },
+  sliderConfig: {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    watchSlidesProgress: true,
+    allowTouchMove: false,
+  }
+};
+
 const validateConfig = {
   justValidate: {
-    errorFieldCssClass: 'is-invalid',
+    errorFieldCssClass: [ 'is-invalid' ],
+    errorLabelCssClass: [ 'form-input__invalid-message' ],
     errorLabelStyle: {
-      color: 'var(--error)',
-      marginTop: '6px',
+      color: 'var(--error-color)',
+      marginTop: '4px',
       fontSize: '12px',
       textAlign: 'left',
     },
@@ -69,6 +103,11 @@ const validateConfig = {
   errorTimeout: 1500,
   mask: {
     bodyMask: ' (___) ___ __ __',
+  },
+  requiredFieldRule: {
+    rule: 'required',
+    value: true,
+    errorMessage: 'Поле обязательно для заполнения'
   }
 };
 
@@ -90,4 +129,5 @@ export {
   validateConfig,
   observerConfig,
   requestsConfig,
+  quizConfig
 };

@@ -2,26 +2,45 @@
   position: relative;
   margin: 0 auto;
   width: 100%;
-  color: #000000;
-  background-color: #FFFFFF;
-  min-width: 360px;
-  max-width: 768px;
+  color: var(--black-color);
+  background-color: var(--white-color);
+
+  &--fs {
+    height: calc(100 * var(--vh, 1vh));
+  }
 
   &__close {
     @include btn-reset;
 
-    position: absolute;
+    position: fixed;
     top: 15px;
-    right: 15px;
+    right: max(15px, calc((100% - 1595px) / 2));
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
-    color: #000000;
+    color: var(--black-50-color);
+
+    @include any-hover {
+      transition: color var(--duration-fast) ease-in-out;
+
+      &:hover {
+        color: var(--black-70-color);
+      }
+    }
   }
 
-  @include media-max(calc(var(--min-site-width) - 1px)) {
-    min-width: auto;
+  &__container {
+    padding: 64px 0;
+  }
+
+  &__scroll-container {
+    display: flex;
+    flex-direction: column;
+
+    &>* {
+      flex-grow: 1;
+    }
   }
 }

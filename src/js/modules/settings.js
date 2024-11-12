@@ -19,6 +19,8 @@ import {
   initMobileMenu
 } from './menu.js';
 
+import QuizApp from './quiz.js';
+
 const initSiteSettings = () => {
   iosVhFix();
   initMobileMenu();
@@ -26,6 +28,7 @@ const initSiteSettings = () => {
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   initAllTabs();
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
+  new QuizApp;
 };
 
 export {

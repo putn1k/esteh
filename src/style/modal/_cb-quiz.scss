@@ -1,0 +1,59 @@
+.cb-quiz {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+    margin-top: 64px;
+    text-align: center;
+    color: var(--black-50-color);
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__pagination {
+    text-align: right;
+    padding-bottom: 12px;
+    color: var(--black-50-color);
+    user-select: none;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid var(--black-30-color);
+    user-select: none;
+  }
+
+  &__control {
+    &.swiper-button-disabled {
+      visibility: hidden;
+    }
+  }
+
+  &__slide {
+    @include scrollbar($bar: var(--black-10-color), $thumb: var(--black-50-color));
+
+    height: calc(100 * var(--vh, 1vh) - 260px);
+    overflow-y: auto;
+  }
+
+  &__slide-content {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__field {
+    max-width: 590px;
+
+    &--submit {
+      padding-top: 24px;
+    }
+  }
+}
