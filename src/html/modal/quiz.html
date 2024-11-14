@@ -7,80 +7,323 @@
          data-slider-pagination></div>
     <div class="swiper-wrapper slider__wrapper">
       <div class="swiper-slide cb-quiz__slide">
-        <div class="cb-quiz__slide-content">
-          <div class="cb-quiz__field">
-            @include('../common/radio-btn.html', { value: 'Красный', type: 'color', checked: true })
-          </div>
-          <div class="cb-quiz__field">
-            @include('../common/radio-btn.html', { value: 'Черный', type: 'color' })
-          </div>
-          <div class="cb-quiz__field">
-          </div>
-          <div class="cb-quiz__field">
-            @include('../common/checkbox-btn.html', {label: 'Чек', value: 'Черный', type: 'check' })
+        <h3 class="m-0 mb-4 h3">Напряжение</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: '0.4-10 кВ', type: 'Напряжение', voltage: 'low', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: '35 кВ', type: 'Напряжение', voltage: 'high', })
+            </div>
           </div>
         </div>
       </div>
       <div class="swiper-slide cb-quiz__slide">
-        <div class="cb-quiz__slide-content">
-          <div class="cb-quiz__field">
-            <label class="form-input">
-              <input class="form-input__field"
-                     type="text"
-                     name="ФИО"
-                     data-validate="name"
-                     placeholder="Ввидите ФИО"
-                     required>
-              <span class="t-sm is-gray-color form-input__label">Ваши Фамилия, Имя, Отчество:</span>
-            </label>
+        <h3 class="m-0 mb-4 h3">Подключение к испытываемому объекту</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Трехфазное', type: 'Подключение к испытываемому объекту', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Однофазное', type: 'Подключение к испытываемому объекту' })
+            </div>
           </div>
-          <div class="cb-quiz__field">
-            <label class="form-input">
-              <input class="form-input__field"
-                     type="text"
-                     name="Организация"
-                     data-validate="org"
-                     placeholder="Ввидите наименование организации"
-                     required>
-              <span class="t-sm is-gray-color form-input__label">Наименование Вашей организации:</span>
-            </label>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Испытательная установка</h3>
+        <div class="cb-quiz__content cb-quiz__test-station">
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Блок прожигающий</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'БП-30 (30 кВ) со встроенным дожигом током 90 А', type: 'Блок прожигающий', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Блок прожигающий' })
+            </div>
           </div>
-          <div class="cb-quiz__field">
-            <label class="form-input">
-              <input class="form-input__field"
-                     type="text"
-                     name="Город"
-                     data-validate="city"
-                     placeholder="Ввидите город"
-                     required>
-              <span class="t-sm is-gray-color form-input__label">Город, в котором находится Ваша организация:</span>
-            </label>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Блок акустики</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'БАА 5/10/20 кВ с энергией 4000 Дж в каждой ступени', type: 'Блок акустики', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'БАА 5/10/20 кВ с энергией 2000 Дж в каждой ступени', type: 'Блок акустики' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'БАА 8/16/32 кВ с энергией 4000 Дж в каждой ступени', type: 'Блок акустики' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Свой вариант', type: 'Блок акустики', custom: true })
+            </div>
           </div>
-          <div class="cb-quiz__field">
-            <label class="form-input">
-              <input class="form-input__field"
-                     type="tel"
-                     name="Телефон"
-                     data-validate="phone"
-                     placeholder="Ввидите телефон"
-                     required>
-              <span class="t-sm is-gray-color form-input__label">Ваш контактный телефон/факс:</span>
-            </label>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Оборудование для беспрожиговых методов</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Импульсно- дуговой метод, колебательного разряда по току, колебательного разряда по напряжению', type: 'Оборудование для беспрожиговых методов', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Импульсно- дуговой метод', type: 'Оборудование для беспрожиговых методов' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Колебательного разряда по току', type: 'Оборудование для беспрожиговых методов' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Колебательного разряда по напряжению', type: 'Оборудование для беспрожиговых методов' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Оборудование для беспрожиговых методов' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Свой вариант', type: 'Оборудование для беспрожиговых методов', custom: true })
+            </div>
           </div>
-          <div class="cb-quiz__field">
-            <label class="form-input">
-              <input class="form-input__field"
-                     type="email"
-                     name="Эл.почта"
-                     data-validate="email"
-                     placeholder="Ввидите адрем почты"
-                     required>
-              <span class="t-sm is-gray-color form-input__label">Адрес Вашей электронной почты:</span>
-            </label>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Рефлектометр</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'РЕЙС-305', type: 'Рефлектометр', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'РЕЙС-405', type: 'Рефлектометр' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Рефлектометр' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Свой вариант', type: 'Рефлектометр', custom: true })
+            </div>
           </div>
-          <div class="cb-quiz__field cb-quiz__field--submit">
-            <button class="btn btn-primary"
-                    type="submit">Отправить</button>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Измеритель параметров изоляции</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Тангенс 2000', type: 'Измеритель параметров изоляции', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Измеритель параметров изоляции' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Свой вариант', type: 'Измеритель параметров изоляции', custom: true })
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Блок низковольтных измерений</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Нужен', type: 'Блок низковольтных измерений', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Блок низковольтных измерений' })
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Источник автономного электропитания</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Бензогенератор 10 кВа', type: 'Источник автономного электропитания', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Дизельгенератор 10 кВа', type: 'Источник автономного электропитания' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Генератор с приводом от базового автомобиля (только грузовые шасси)', type: 'Источник автономного электропитания' })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Источник автономного электропитания' })
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Кабельные барабаны</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="text"
+                       name="Кабель питания"
+                       placeholder="Укажите длину"
+                       data-validate="power-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Кабель питания, м:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="number"
+                       name="Кабель высоковольтный"
+                       placeholder="Укажите длину"
+                       data-validate="hv-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Кабель высоковольтный, м:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="number"
+                       name="Провод защитного заземления"
+                       placeholder="Укажите длину"
+                       data-validate="safe-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Провод защитного заземления, м:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="number"
+                       name="Провод для испытания ~50кВ"
+                       placeholder="Укажите длину"
+                       data-validate="test-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Провод для испытания ~50кВ, м:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="number"
+                       name="Провод рабочего заземления"
+                       placeholder="Укажите длину"
+                       data-validate="work-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Провод рабочего заземления, м:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="number"
+                       name="Кабель дожига"
+                       placeholder="Укажите длину"
+                       data-validate="burn-cable-width"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Кабель дожига, м:</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Комплект средств защиты</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Нужен', type: 'Комплект средств защиты', checked: true })
+            </div>
+            <div class="cb-quiz__field">
+              @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Комплект средств защиты' })
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <h3 class="m-0 mb-4 h3">Дополнительные приборы</h3>
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <textarea class="form-input__field form-input__field--area"
+                          type="text"
+                          name="Дополнительные приборы"
+                          placeholder="Укажите дополнительные приборы"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide cb-quiz__slide">
+        <div class="cb-quiz__content">
+          <div class="cb-quiz__fields">
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="text"
+                       name="ФИО"
+                       data-validate="name"
+                       placeholder="Введите ФИО"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Ваши Фамилия, Имя, Отчество:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="text"
+                       name="Организация"
+                       data-validate="org"
+                       placeholder="Введите наименование организации"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Наименование Вашей организации:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="text"
+                       name="Город"
+                       data-validate="city"
+                       placeholder="Введите город"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Город, в котором находится Ваша организация:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="tel"
+                       name="Телефон"
+                       data-validate="phone"
+                       placeholder="Введите телефон"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Ваш контактный телефон/факс:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field">
+              <label class="form-input">
+                <input class="form-input__field"
+                       type="email"
+                       name="Эл.почта"
+                       data-validate="email"
+                       placeholder="Введите адрем почты"
+                       required>
+                <span class="t-sm is-gray-color form-input__label">Адрес Вашей электронной почты:</span>
+              </label>
+            </div>
+            <div class="cb-quiz__field cb-quiz__field--submit">
+              <button class="btn btn-primary"
+                      type="submit">Отправить</button>
+            </div>
           </div>
         </div>
       </div>
@@ -97,3 +340,46 @@
     </div>
   </div>
 </form>
+<template id="test-station-low">
+  <div class="cb-quiz__fields">
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Аппарат АИП-70 с током прожига 80 мА', type: 'Испытательная установка', checked: true })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Аппарат АИД-70 или аналог', type: 'Испытательная установка' })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Испытательная установка' })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Свой вариант', type: 'Испытательная установка', custom: true })
+    </div>
+  </div>
+</template>
+<template id="test-station-high">
+  <div class="cb-quiz__fields">
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Высоковольтный масляный трансформатор ИОМ-100/25 с цифровым киловольтметром', type: 'Испытательная установка', checked: true })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Испытательная установка УИВ-100/20 с элегазовым трансформатором', type: 'Испытательная установка' })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Испытательный трансформатор по выбору заказчика с указанием в комментариях его напряжения и мощности.', type: 'Испытательная установка' })
+    </div>
+    <div class="cb-quiz__field">
+      @include('../common/radio-btn.html', { value: 'Не нужен', type: 'Испытательная установка' })
+    </div>
+  </div>
+</template>
+<template id="custom-field">
+  <div class="cb-quiz__field cb-quiz__field--custom">
+    <label class="form-input">
+      <input class="form-input__field"
+             type="text"
+             name=""
+             placeholder="Введите свой вариант"
+             required>
+    </label>
+  </div>
+</template>

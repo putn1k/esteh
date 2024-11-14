@@ -84,7 +84,9 @@ const quizConfig = {
     spaceBetween: 30,
     watchSlidesProgress: true,
     allowTouchMove: false,
-  }
+  },
+  MIN_CABLE_WIDTH: 10,
+  MAX_CABLE_WIDTH: 30
 };
 
 const validateConfig = {
@@ -108,7 +110,7 @@ const validateConfig = {
     rule: 'required',
     value: true,
     errorMessage: 'Поле обязательно для заполнения'
-  }
+  },
 };
 
 const observerConfig = {

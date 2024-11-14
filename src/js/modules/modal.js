@@ -14,4 +14,5 @@ const initModals = () => {
 
 export {
   initModals,
+  simpleModal
 };

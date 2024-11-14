@@ -2,6 +2,10 @@
   <input class="form-change__field"
          type="radio"
          name="@type"
+         @if(context.voltage){data-voltage="@voltage"
+         }
+         @if(context.custom){data-custom
+         }
          value="@value"
          @if(context.checked){checked}>
   <span class="form-change__label">@if(context.label){@label}@if(!context.label){@value}</span>

@@ -44,13 +44,15 @@
     overflow-y: auto;
   }
 
-  &__slide-content {
+  &__fields {
     display: grid;
     row-gap: 12px;
   }
 
   &__field {
     max-width: 590px;
+    padding-right: 10px;
+    overflow: hidden;
 
     &--submit {
       padding-top: 24px;

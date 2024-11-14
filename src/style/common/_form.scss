@@ -38,16 +38,13 @@
 
     &--area {
       resize: none;
-      height: var(--input-area-height, 6em);
+      height: var(--input-area-height, 10em);
     }
   }
 }
 
 .form-change {
-  --outline-offset: 2px;
-
   position: relative;
-  padding: var(--outline-offset, 0);
 
   &--radio {
     --b-rad: 50%;
@@ -85,6 +82,7 @@
       margin-right: 0.5em;
       border: 1px solid var(--black-50-color);
       border-radius: var(--b-rad, none);
+      flex-shrink: 0;
     }
   }
 }
