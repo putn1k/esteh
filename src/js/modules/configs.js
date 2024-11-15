@@ -85,8 +85,8 @@ const quizConfig = {
     watchSlidesProgress: true,
     allowTouchMove: false,
   },
-  MIN_CABLE_WIDTH: 10,
-  MAX_CABLE_WIDTH: 30
+  MIN_CABLE_WIDTH: 0,
+  MAX_CABLE_WIDTH: 50
 };
 
 const validateConfig = {
