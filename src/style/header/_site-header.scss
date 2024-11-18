@@ -24,7 +24,8 @@
   &__logo {
     display: flex;
 
-    & a {
+    & a,
+    & span {
       display: inline-flex;
     }
 
