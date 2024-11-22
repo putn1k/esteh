@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  @include('html/head/index.html')
+  <title>Страница не найдена</title>
+</head>
+
+<body class="indent-reset site">
+  <div inert=""
+       id="site-top"></div>
+  <div class="site__container">
+    @include('html/header/index.html')
+    <main class="site__content page-404">
+      <div class="page-404__bg"
+           data-mouse-parallax></div>
+      <div class="container">
+        <div class="page-404__wrapper">
+          <h1 class="h1 mb-3">Страница <span class="is-marked-text">не найдена</span></h1>
+          <div class="page-404__descr">
+            <p class="h3 mb-5">Так уж&nbsp;получилось, что из&nbsp;всех страниц нашего сайта&nbsp;Вы оказались как раз на&nbsp;той, которая уже <span class="is-marked-text">не&nbsp;существует</span>.</p>
+            <a class="btn btn-primary"
+               href="page-main.html">На главную</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('html/footer/index.html')
+  </div>
+  @include('html/service/scripts.html')
+</body>
+
+</html>

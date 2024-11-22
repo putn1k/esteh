@@ -19,6 +19,10 @@ import {
   initMobileMenu
 } from './menu.js';
 
+import {
+  initBgParalaxEffect
+} from './bg-paralax.js';
+
 import QuizApp from './quiz.js';
 
 const initSiteSettings = () => {
@@ -28,6 +32,7 @@ const initSiteSettings = () => {
   new SmoothScroll( 'a[href*="#"]', smoothScrollConfig );
   initAllTabs();
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
+  initBgParalaxEffect();
   new QuizApp;
   new AcceptCookiePopup( {
     siteName: 'ООО ПО Энергоспецтехника',

@@ -1,0 +1,49 @@
+.page-404 {
+  position: relative;
+  overflow: hidden;
+
+  &__bg {
+    position: absolute;
+    background-image: url('../img/covers/404-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    z-index: 1;
+    top: 0;
+    left: -3%;
+  }
+
+  &__wrapper {
+    position: relative;
+    min-height: 675px;
+    padding: 128px 0;
+    z-index: 1;
+  }
+
+  &__descr {
+    color: var(--black-70-color);
+  }
+
+  @include media-min ($xl) {
+    &__wrapper {
+      padding: 160px 0;
+    }
+
+    &__descr {
+      max-width: 550px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__wrapper {
+      padding: 192px 0;
+      min-height: 800px;
+    }
+
+    &__descr {
+      max-width: 650px;
+    }
+  }
+}

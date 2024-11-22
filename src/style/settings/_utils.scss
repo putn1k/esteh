@@ -39,6 +39,10 @@ input[type='file'].visually-hidden {
   color: var(--black-70-color);
 }
 
+.is-marked-text {
+  color: var(--orange-color);
+}
+
 .is-contain {
   object-fit: contain;
 }
