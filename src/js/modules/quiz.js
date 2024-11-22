@@ -28,12 +28,13 @@ export default class QuizApp {
   constructor() {
     this.MIN_CABLE_WIDTH = quizConfig.MIN_CABLE_WIDTH;
     this.MAX_CABLE_WIDTH = quizConfig.MAX_CABLE_WIDTH;
+    this.form = document.querySelector( `#${quizConfig.formID}` );
+    if ( !this.form ) return;
     this.modalConfig = Object.assign( {}, quizConfig.modalConfig, {
       beforeOpen: this.initSlider,
       afterClose: this.destroySlider,
     } );
     this.modal = new HystModal( this.modalConfig );
-    this.form = document.querySelector( `#${quizConfig.formID}` );
     this.voltageNodes = this.form.querySelectorAll( '[data-voltage]' );
     this.radioNodes = this.form.querySelectorAll( '[type="radio"]' );
     this.setBaseValidate( this.form );
