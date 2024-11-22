@@ -29,6 +29,10 @@ const initSiteSettings = () => {
   initAllTabs();
   [ '[data-gallery]' ].map( ( item ) => baguetteBox.run( item ) );
   new QuizApp;
+  new AcceptCookiePopup( {
+    siteName: 'ООО ПО Энергоспецтехника',
+    linkCookiePage: 'policy-cookie.php'
+  } );
 };
 
 export {
