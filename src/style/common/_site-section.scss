@@ -15,6 +15,15 @@
     background-color: var(--black-color);
   }
 
+  &--gray {
+    --card-color: var(--white-color);
+    --card-bg: var(--black-color);
+    --bb-color: var(--black-70-color);
+
+    color: var(--black-50-color);
+    background-color: var(--black-color);
+  }
+
   &__title {
     position: relative;
     z-index: 1;

@@ -48,15 +48,4 @@
       }
     }
   }
-
-  &__map {
-    width: 100%;
-    height: 345px;
-  }
-
-  @include media-min ($xl) {
-    &__map {
-      height: 460px;
-    }
-  }
 }
